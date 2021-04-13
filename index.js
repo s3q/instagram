@@ -4,13 +4,13 @@ let submit = document.getElementById('submit')
 let error = document.getElementById('error')
 
 function uptrim() {
-    username.value = username.value.trim()
-    password.value = password.value.trim()
+    username.value = username.value.trim();
+    password.value = password.value.trim();
 }
 
 function checkpass(pass, user) {
     uptrim()
-    if (pass.length >= 5 && user.length > 0) {
+    if (pass.length >= 6 && user.length > 0) {
         return true;
     } else {
         return false;
