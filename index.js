@@ -84,7 +84,7 @@ function XMLHttpRequestFn({
     method.toUpperCase();
 
     newRequest.open(method, url + (method === "GET" ? "?" + data : ""), true);
-    newRequest.setRequestHeader("Access-Control-Allow-Origin", "*");
+   
     newRequest.setRequestHeader(
         "Content-Type",
         "application/x-www-form-urlencoded"
