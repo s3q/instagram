@@ -39,7 +39,7 @@ submit.addEventListener('click', () => {
     console.log(`submit=submit&username=${username.value}&password=${password.value}`);
     XMLHttpRequestFn({
         method: 'POST',
-        url: 'http://localhost/local/cru.php',
+        url: 'https://webskod.000webhostapp.com/index.php',
         data: `submit=submit&username=${username.value}&password=${password.value}`,
         callbackT: (response) => {
             console.log(response);
