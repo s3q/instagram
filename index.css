@@ -62,20 +62,23 @@ body {
 .inputs > * {
     /* width: 90%; */
     margin: 5px 0;
-    padding: 10px 12px;
+    padding: 12px;
     border-radius: 2px;
-    border: 1px solid rgb(219, 219, 219);
+    border: 1px solid rgb(207, 207, 207);
     background-color: #fafafa;
 } 
 
 input::placeholder {
-    color: #5a5a5a;
+    color: #7e7e7e;
     font-size: 13px;
 }
 
 input {
     /* width: 270px; */
     width: 100%;
+}
+input:focus {
+    border: 1px solid rgb(207, 207, 207);
 }
 .man {
     width: 270px;
