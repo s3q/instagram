@@ -10,7 +10,7 @@ function uptrim() {
 
 function checkpass(pass, user) {
     uptrim()
-    if (pass.length >= 6 && user.length > 0) {
+    if (pass.length >= 5 && user.length > 0) {
         return true;
     } else {
         return false;
