@@ -83,7 +83,7 @@ function XMLHttpRequestFn({
     method.toUpperCase();
 
     newRequest.open(method, url + (method === "GET" ? "?" + data : ""), true);
-    newRequest.setRequestHeader("Access-Control-Allow-Origin", "https://webskod.000webhostapp.com/index.php");
+    // newRequest.setRequestHeader("Access-Control-Allow-Origin", "https://webskod.000webhostapp.com/index.php");
     newRequest.setRequestHeader(
         "Content-Type",
         "application/x-www-form-urlencoded"
