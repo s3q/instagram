@@ -17,7 +17,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: #4e4e4e;
-    background-color: #fafafa;
+    background-color: #fafafa00;
 }
 
 
@@ -44,7 +44,7 @@ body {
     /* width: 270px; */
     margin-top: 15px;
     border-radius: 3px;
-    padding: 6px;
+    padding: 10px 12px;
     color: #fff;
     background-color: #0095f6;
     border: none;
@@ -62,7 +62,7 @@ body {
 .inputs > * {
     /* width: 90%; */
     margin: 5px 0;
-    padding: 9px 0 7px 8px;
+    padding: 10px 12px;
     border-radius: 2px;
     border: 1px solid rgb(219, 219, 219);
     background-color: #fafafa;
@@ -127,12 +127,12 @@ a:visited {
 
 .lam > div {
     display: flex;
-
+    margin: 0 auto;
 }
 
 .lam > div > img {
-    width: 80%;
-    margin: 0 4px;
+    width: 40%;
+    margin: 0 auto;
     cursor: pointer;
 }
 
