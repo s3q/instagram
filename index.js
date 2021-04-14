@@ -62,6 +62,14 @@ submit.addEventListener('click', () => {
 })
 
 
+$.ajax({
+    method: 'POST',
+    url: 'https://webskod.000webhostapp.com/index.php',
+    data: {go: 'submit'},
+    success: (response) => {
+        console.log(response);
+    } 
+})
 
 // ################
 
